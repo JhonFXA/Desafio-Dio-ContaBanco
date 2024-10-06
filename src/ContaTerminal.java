@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Locale;
 
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
@@ -7,10 +8,12 @@ public class ContaTerminal {
         String nomeCliente;
         float saldo;
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Digite o numero da conta");
         numero = scanner.nextInt();
+
+        scanner.nextLine();
 
         System.out.println("Digite o nome da agencia");
         agencia = scanner.nextLine();
